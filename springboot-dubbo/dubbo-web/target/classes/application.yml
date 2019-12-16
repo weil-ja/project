@@ -1,0 +1,9 @@
+#server:
+#  port: 8088
+## Dubbo 配置文件
+#dubbo:
+#  application:
+#    name: block-dubbo-consume
+#  registry:
+#    address: 127.0.0.1:2181
+#    protocol: zookeeper
