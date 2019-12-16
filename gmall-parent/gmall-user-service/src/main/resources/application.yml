@@ -1,0 +1,30 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 7007
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/student?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  application:
+    name: user-dubbo-service
+# Dubbo 配置文件
+dubbo:
+  application:
+    name: user-service
+  registry:
+    address: 192.168.220.20:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.lw.gmall
+
+logging:
+  level:
+    com.lw.gmall.user.mapper: debug # 显示执行sql
